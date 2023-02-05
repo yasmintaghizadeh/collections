@@ -11,5 +11,7 @@ public class NodeTest {
         myNode.appendToTail(3);
         myNode.appendToTail(80);
         myNode.print();
+        myNode.deleteMyNode(myNode,102);
+        myNode.print();
     }
 }

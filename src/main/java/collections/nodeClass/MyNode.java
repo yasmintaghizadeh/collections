@@ -7,9 +7,6 @@ public class MyNode {
         Node next;
         int data;
 
-
-        
-
         public Node(int d) {
             this.data = d;
             this.next = null;
@@ -30,12 +27,19 @@ public class MyNode {
 
     }
 
-    public void deleteMyNode(MyNode myNode,int d){
+    public Node deleteMyNode(MyNode myNode,int d){
         if (head==null){
-            return;
+            return null;
         }
         Node temp=head;
-
+        while (temp.next !=null){
+            if (temp.next.data==d){
+                temp.next=temp.next.next;
+                break;
+            }
+            temp=temp.next;
+        }
+        return head;
     }
 
 
